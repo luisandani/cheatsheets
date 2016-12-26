@@ -13,9 +13,20 @@
 ```
   Compress:  tar cvJf compressed-file.tar.xz FILES
   Uncompress: tar xvf compressed-file.tar.xz PATH
+  View: tar tvf opt_bin.tar.xz
+```
+#### params
+```
+    c - compress
+    v - verbose
+    f - file
+    t - list
+    *J - Compress with xz
+    *z - Compress with gz
+    *j - Compress with bz2
 ```
 
-#### disk usage
+#### Disk Usage
 ```
 $ du -hs
 $ du -h --max-depth=1
