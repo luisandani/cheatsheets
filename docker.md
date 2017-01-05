@@ -9,11 +9,18 @@ docker tag <image_id> <tag_name>
 docker history <tag_name>
 ```
 
-### Build/run
+### Build
 ```
 docker build .
 docker build -t <name:tag> . # better
-docker run --rm -ti docker-php70:latest /bin/bash # open bash and then delete container
+```
+
+### Create/Run
+```
+docker run --rm -p 80:80 <name:tag>
+docker run --rm -p 80:80 <name:tag> --name <desired_name>
+docker run --rm -ti <name:tag> /bin/bash # open bash and then delete container
+docker create <name:tag>
 ```
 
 ### Listing
@@ -35,6 +42,27 @@ docker export <container_hash> > export.tar
 ```
 
 ## Docker Compose
+
+### Basic structure
+```
+version: '2'
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    volumes:
+          - ./web:/server/http
+    ports:
+      - "80:80"
+#      - "443:443"
+#    links:
+#      - redis
+    environment:
+      DEBUG: 'true'
+```
+
+### Commands
+
 ```
 docker-compose build
 docker-compose up -d
