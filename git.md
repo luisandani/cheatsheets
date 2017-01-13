@@ -46,7 +46,7 @@ git branch -d mybranch
 ```
 git branch -m old_branch new_branch         # Rename branch locally
 git push origin :old_branch                 # Delete the old branch
-git push --set-upstream origin new_branch   # Push the new branch, set local branch to track the new remote
+git push -u origin new_branch   # Push the new branch, set local branch to track the new remote
 ```
 
 ### Remove info from deleted branches on origin
