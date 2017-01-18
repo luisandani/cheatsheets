@@ -99,5 +99,7 @@ eval $(docker-machine env testing)
 docker-machine ls
 docker-machine ip testing
 docker-machine ssh testing
+docker-machine start testing
 docker-machine stop testing
+docker-machine regenearte-certs testing
 ```

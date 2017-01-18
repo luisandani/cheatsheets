@@ -18,6 +18,11 @@ fly -t <target-name> sp -p <pipeline-name> -c <pipeline-yml-file-path> -l <(ansi
 fly -t <target-name> dp -p <pipeline-name>
 ```
 
+### Create a team
+```
+flys set-team -n <team-name> --github-auth-client-id=<a-client-id> --github-auth-client-secret=<a-secret> --github-auth-organization=<organization>
+```
+
 ### Debug Commands
 ```
 fly -t <target-name> builds

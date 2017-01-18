@@ -11,6 +11,9 @@ git clone git://sub.domain.com/repo.git
 ### Checkouts
 ```
 git checkout mybranch
+
+## checkout files from a branch
+git checkout <branch_name> -- <paths>
 ```
 
 ### Fetch
