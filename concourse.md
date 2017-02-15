@@ -34,3 +34,17 @@ fly -t <target-name> i -b <build-number> /bin/bash
 ```
 fly -t <target-name> cr -r <pipeline-name>/<resource-name>
 ```
+
+### Create version branch for SEMVER
+
+```
+git checkout --orphan version
+git rm --cached -r .
+rm -rf *
+rm .gitignore .gitmodules
+touch README.md
+echo "0.0.1" > version
+git add .
+git commit -m "new branch"
+git push origin version
+```
