@@ -9,6 +9,9 @@
 #### for loop
 `$ for NUM in `seq 1 1 1000`; do touch $NUM-file.txt; done`
 
+#### search and delete Files (remove type for also directories)
+`$ find . -type f -name "FILE-TO-FIND" -exec rm -f {} \;`
+
 ## TAR
 ```
   Compress:  tar cvJf compressed-file.tar.xz FILES
@@ -49,3 +52,4 @@ $ df -h
 sudo find . -type f -exec chmod 664 {} \;
 sudo find . -type d -exec chmod 775 {} \;
 ```
+
