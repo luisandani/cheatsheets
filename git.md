@@ -120,3 +120,15 @@ git push -f
   git checkout master
   git merge your-branch
 ```
+
+### Commits
+```
+# to keep 1 commit per PR (trunk base development) use amend to keep ading to the last commit
+git commit --amend --no-edit
+```
+
+### Log
+```
+git log --oneline
+```
+
